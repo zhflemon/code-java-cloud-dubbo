@@ -58,7 +58,7 @@ public class DictController {
      */
     @RequestMapping(value = "save", method = RequestMethod.POST)
     public String save(Dict dict) {
-        int result = dictService.save(dict);
+		/* int result = dictService.save(dict); */
         return "redirect:/dict/list";
     }
 

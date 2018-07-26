@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 @Service(version = DubboVersionConstant.DUBBO_VERSION_GAMING_SERVER_SERVICE_REDIS)
 public class RedisServiceImpl implements RedisService {
     @Autowired
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
     @Override
     public Object get(String key) {
@@ -25,6 +25,6 @@ public class RedisServiceImpl implements RedisService {
 
     @Override
     public void set(String key, Object value, int seconds) {
-        redisTemplate.opsForValue().set(key, value, seconds, TimeUnit.SECONDS);
+		redisTemplate.opsForValue().set(key, value, seconds, TimeUnit.SECONDS);
     }
 }

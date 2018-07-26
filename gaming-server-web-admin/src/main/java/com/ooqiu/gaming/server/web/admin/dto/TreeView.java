@@ -15,8 +15,12 @@ import java.io.Serializable;
  */
 @Data
 public class TreeView implements Serializable {
-    private String id;
-    private String icon;
-    private String text;
-    private boolean children;
+	/**
+	* @Fields serialVersionUID : (用一句话描述这个变量表示什么)
+	*/
+	private static final long serialVersionUID = 844380268391149550L;
+	private String id;
+	private String icon;
+	private String text;
+	private boolean children;
 }

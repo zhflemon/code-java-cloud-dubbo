@@ -16,11 +16,15 @@ import java.util.List;
  */
 @Data
 public class ArticleDTO implements Serializable {
-    private long id;
-    private String type;
-    private String source;
-    private String title;
-    private String url;
-    private String introduction;
-    private List<String> cover;
+	/**
+	* @Fields serialVersionUID : (用一句话描述这个变量表示什么)
+	*/
+	private static final long serialVersionUID = -39482916213122167L;
+	private long id;
+	private String type;
+	private String source;
+	private String title;
+	private String url;
+	private String introduction;
+	private List<String> cover;
 }

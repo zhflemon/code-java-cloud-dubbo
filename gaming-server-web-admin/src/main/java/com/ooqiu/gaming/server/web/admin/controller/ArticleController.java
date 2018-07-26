@@ -1,23 +1,22 @@
 package com.ooqiu.gaming.server.web.admin.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
-import com.github.pagehelper.PageInfo;
-import com.google.common.collect.Lists;
-import com.ooqiu.gaming.server.domain.Article;
-import com.ooqiu.gaming.server.domain.Dict;
-import com.ooqiu.gaming.server.web.admin.dto.DataTable;
-import com.ooqiu.gaming.service.admin.api.ArticleService;
-import com.ooqiu.gaming.service.admin.api.DictService;
-import com.ooqui.gaming.server.commons.constant.DubboVersionConstant;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.List;
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.github.pagehelper.PageInfo;
+import com.google.common.collect.Lists;
+import com.ooqiu.gaming.server.domain.Article;
+import com.ooqiu.gaming.server.web.admin.dto.DataTable;
+import com.ooqiu.gaming.service.admin.api.ArticleService;
+import com.ooqui.gaming.server.commons.constant.DubboVersionConstant;
 
 /**
  * 文章管理
@@ -81,7 +80,7 @@ public class ArticleController {
 
         article.setCover(imageList.toString());
 
-        int result = articleService.save(article);
+		/* int result = articleService.save(article); */
         return "redirect:/article/list";
     }
 

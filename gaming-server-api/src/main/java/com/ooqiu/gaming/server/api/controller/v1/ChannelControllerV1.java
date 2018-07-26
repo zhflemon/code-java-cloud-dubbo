@@ -47,7 +47,7 @@ public class ChannelControllerV1 {
             data.add(dto);
         }
 
-        Channel channel = new Channel();
+		/* Channel channel = new Channel(); */
 
         return BaseResult.success(data);
     }

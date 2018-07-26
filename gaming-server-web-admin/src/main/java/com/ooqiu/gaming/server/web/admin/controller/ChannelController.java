@@ -53,7 +53,7 @@ public class ChannelController {
      */
     @RequestMapping(value = "save", method = RequestMethod.POST)
     public String save(Channel channel) {
-        int result = channelService.save(channel);
+		/* int result = channelService.save(channel); */
         return "redirect:/channel/list";
     }
 
